@@ -4,31 +4,31 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ledger & Co. | Investment Research & Financial Education</title>
-<meta name="description" content="Independent investment research, dividend analysis, portfolio insights, and financial education for long-term investors.">
+<title>Gelder & Co. | Financial Intelligence & Digital Tools</title>
+<meta name="description" content="Gelder & Co. — Practical financial education, interactive scoring tools, and step-by-step systems to help you make smarter money decisions and build wealth.">
 <link rel="canonical" href="https://onestopdesignshop.github.io/Ledger-co-site/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Ledger & Co.">
-<meta property="og:title" content="Ledger & Co. | Investment Research & Financial Education">
-<meta property="og:description" content="Independent investment research, dividend analysis, portfolio insights, and financial education for long-term investors.">
+<meta property="og:site_name" content="Gelder & Co.">
+<meta property="og:title" content="Gelder & Co. | Financial Intelligence & Digital Tools">
+<meta property="og:description" content="Practical financial education, interactive scoring tools, and step-by-step systems to help you make smarter money decisions and build wealth.">
 <meta property="og:url" content="https://onestopdesignshop.github.io/Ledger-co-site/">
 <meta property="og:locale" content="en_US">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ledger & Co. | Investment Research & Financial Education">
-<meta name="twitter:description" content="Independent investment research, dividend analysis, portfolio insights, and financial education for long-term investors.">
+<meta name="twitter:title" content="Gelder & Co. | Financial Intelligence & Digital Tools">
+<meta name="twitter:description" content="Practical financial education, interactive scoring tools, and step-by-step systems to help you make smarter money decisions and build wealth.">
 
 <!-- Structured data: Organization -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Ledger & Co.",
+  "name": "Gelder & Co.",
   "url": "https://onestopdesignshop.github.io/Ledger-co-site/",
-  "description": "Independent investment research, dividend analysis, portfolio insights, and financial education for long-term investors.",
+  "description": "Practical financial education, interactive scoring tools, and step-by-step systems for smarter money decisions.",
   "email": "dee8shops@gmail.com",
   "sameAs": []
 }
@@ -38,10 +38,266 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 <style>
-  /* Scoped styles for the multi-step signup plan picker (single vs. stack).
-     Added inline since these are new classes not yet in css/styles.css —
-     safe to migrate into that file later, but kept self-contained here so
-     this works without needing to touch the main stylesheet. */
+  /* NEW: Gelder & Co. brand positioning */
+  .gelder-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    border-radius: 20px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: var(--md);
+  }
+
+  /* Enhanced hero for conversion */
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--lg);
+    margin: var(--2xl) 0;
+    padding: var(--lg);
+    background: rgba(212, 175, 55, 0.05);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+  }
+
+  .hero-stat {
+    text-align: center;
+  }
+
+  .hero-stat-val {
+    font-family: var(--ff-mono);
+    font-size: 28px;
+    font-weight: var(--fw-bold);
+    color: var(--gold);
+    margin-bottom: var(--xs);
+  }
+
+  .hero-stat-label {
+    font-size: 12px;
+    color: var(--slate);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Where Are You section */
+  .guidance-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-bottom: var(--2xl);
+  }
+
+  .guidance-card {
+    padding: var(--xl);
+    background: linear-gradient(135deg, rgba(26, 35, 64, 0.6) 0%, rgba(15, 22, 41, 0.4) 100%);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: var(--transition-slow);
+    text-align: left;
+  }
+
+  .guidance-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-6px);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(26, 35, 64, 0.7) 100%);
+  }
+
+  .guidance-card-num {
+    font-family: var(--ff-mono);
+    font-size: 32px;
+    font-weight: var(--fw-bold);
+    color: var(--gold);
+    margin-bottom: var(--md);
+  }
+
+  .guidance-card h4 {
+    font-size: 18px;
+    margin-bottom: var(--md);
+    color: var(--parchment);
+  }
+
+  .guidance-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(245, 237, 224, 0.85);
+    margin-bottom: 0;
+  }
+
+  /* Gelder Intelligence section */
+  .intelligence-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    padding: var(--xl);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.06) 0%, rgba(26, 35, 64, 0.4) 100%);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    margin-bottom: var(--2xl);
+  }
+
+  .intelligence-content h3 {
+    font-size: 28px;
+    margin-bottom: var(--md);
+    color: var(--parchment);
+  }
+
+  .intelligence-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--lg);
+    margin-bottom: var(--xl);
+  }
+
+  .intelligence-feature {
+    display: flex;
+    gap: var(--md);
+  }
+
+  .intelligence-feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: rgba(212, 175, 55, 0.15);
+    border-radius: 6px;
+    flex: 0 0 auto;
+    font-size: 16px;
+  }
+
+  .intelligence-feature-text h5 {
+    font-size: 14px;
+    margin-bottom: var(--xs);
+    color: var(--parchment);
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: var(--fw-semibold);
+  }
+
+  .intelligence-feature-text p {
+    font-size: 13px;
+    color: var(--slate);
+    margin-bottom: 0;
+  }
+
+  .intelligence-visual {
+    padding: var(--xl);
+    background: rgba(10, 17, 36, 0.5);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .intelligence-visual-placeholder {
+    font-size: 48px;
+    margin-bottom: var(--lg);
+  }
+
+  .intelligence-visual-text {
+    font-size: 13px;
+    color: var(--slate);
+    line-height: 1.6;
+  }
+
+  /* Product showcase improvements */
+  .product-section-intro {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto var(--2xl);
+  }
+
+  .product-section-intro h2 {
+    font-size: 32px;
+    margin-bottom: var(--lg);
+  }
+
+  .product-section-intro p {
+    font-size: 16px;
+    color: rgba(245, 237, 224, 0.88);
+  }
+
+  /* Enhanced scorecard CTA */
+  .scorecard-hero {
+    text-align: center;
+    padding: var(--2xl) var(--xl);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(26, 35, 64, 0.5) 100%);
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    margin-bottom: var(--3xl);
+  }
+
+  .scorecard-hero h3 {
+    font-size: 24px;
+    margin-bottom: var(--lg);
+    color: var(--gold-bright);
+  }
+
+  .scorecard-hero p {
+    font-size: 15px;
+    color: rgba(245, 237, 224, 0.88);
+    max-width: 600px;
+    margin: 0 auto var(--xl);
+  }
+
+  .scorecard-hero .btn-primary {
+    display: inline-block;
+  }
+
+  /* Dashboard improvements */
+  .dash-welcome-msg {
+    font-size: 14px;
+    color: var(--slate);
+    margin-bottom: var(--xl);
+    padding: var(--lg);
+    background: rgba(212, 175, 55, 0.05);
+    border-left: 3px solid var(--gold);
+    border-radius: 6px;
+  }
+
+  .dash-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--lg);
+    margin-bottom: var(--2xl);
+  }
+
+  .dash-card {
+    padding: var(--lg);
+    background: rgba(26, 35, 64, 0.3);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    text-align: center;
+    transition: var(--transition);
+  }
+
+  .dash-card:hover {
+    border-color: var(--gold);
+    background: rgba(26, 35, 64, 0.5);
+  }
+
+  .dash-card-label {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--slate);
+    margin-bottom: var(--sm);
+  }
+
+  .dash-card-val {
+    font-family: var(--ff-mono);
+    font-size: 24px;
+    font-weight: var(--fw-bold);
+    color: var(--gold);
+  }
+
+  /* Stack tier options (from original signup) */
   .stack-tier-options{ display:flex; flex-direction:column; gap:10px; margin-top:8px; }
   .stack-tier-row{
     display:flex; align-items:center; gap:12px;
@@ -52,9 +308,8 @@
   .stack-tier-name{ flex:1 1 auto; font-size:14px; }
   .stack-tier-billing{ flex:0 0 auto; max-width:170px; }
   .stack-tier-row:has(input:checked){ border-color:var(--gold); background:rgba(212,175,55,0.06); }
-  .stack-tier-billing:disabled{ opacity:0.4; cursor:not-allowed; }
 
-  /* Signup quiz */
+  /* Quiz styles */
   .quiz-question{ margin-bottom:16px; }
   .quiz-question label{ display:block; margin-bottom:6px; font-size:13px; color:var(--slate); }
   .quiz-result{
@@ -65,65 +320,50 @@
   .quiz-result-name{ font-size:19px; font-family:'Fraunces',serif; color:var(--gold-bright); margin-top:4px; }
   .quiz-result-note{ font-size:13px; color:var(--slate); margin-top:6px; }
 
-  /* Free-tier preview dashboard */
-  .preview-badge{
-    display:inline-block; font-size:10.5px; letter-spacing:0.05em; font-family:'JetBrains Mono',monospace;
-    color:var(--slate); border:1px solid rgba(255,255,255,0.15); border-radius:4px;
-    padding:3px 8px; margin-bottom:10px;
-  }
-  .preview-blur{ position:relative; }
-  .preview-blur .lib-action{ filter:blur(0.4px); opacity:0.85; }
-  .preview-overlay-note{
-    font-size:12.5px; color:var(--slate); margin-top:14px; padding:12px 14px;
-    border:1px dashed rgba(255,255,255,0.15); border-radius:8px;
-  }
-
-  /* SHOP button + account nav (signed-in only) */
+  /* Navigation updates */
   #shopNavLink, #accountNavLink{ display:none; }
   body.is-authed #shopNavLink{ display:inline-block; }
   body.is-authed #accountNavLink{ display:inline-block; }
   body.is-authed .sign-in-link{ display:none; }
   #accountNavLink{ cursor:pointer; color:inherit; text-decoration:none; }
-  .dash-shop-btn{
-    display:inline-block; margin-top:10px;
-    font-family:'JetBrains Mono',monospace; text-transform:uppercase;
-    letter-spacing:0.12em; font-size:12px; font-weight:500;
-    color:#0a1124; background:var(--gold, #c9a13b);
-    border:none; border-radius:3px; cursor:pointer;
-    padding:13px 26px; text-decoration:none;
-    transition:background .2s ease;
-  }
-  .dash-shop-btn:hover{ background:var(--gold-bright, #e7c86a); }
 
-  /* MOBILE IMPROVEMENTS */
+  /* Mobile refinements */
   @media (max-width:768px) {
-    .hero .wrap { flex-direction: column; gap: 28px; }
-    .hero-panel { width: 100%; }
-    .products { gap: 20px; }
-    .product-card { padding: 20px; }
-    .section-head { margin-bottom: 20px; }
-    section { padding: 40px 0 !important; }
-    .rates-table { overflow-x: auto; }
-    .faq-item { padding: 14px; margin-bottom: 12px; }
-    .faq-q { font-size: 15px; padding: 8px 0; }
-    .product-btn { padding: 12px 20px; font-size: 13px; }
-    .btn-primary, .btn-ghost { padding: 12px 24px; font-size: 14px; }
+    .intelligence-container {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .hero-stats {
+      grid-template-columns: 1fr;
+      gap: var(--md);
+    }
+
+    .guidance-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .product-section-intro h2 {
+      font-size: 24px;
+    }
+
+    .scorecard-hero {
+      padding: var(--xl) var(--lg);
+    }
   }
 
-  @media (max-width:600px) {
-    .wrap { padding: 0 16px; }
-    h1 { font-size: clamp(24px, 5vw, 36px); }
-    h2 { font-size: clamp(20px, 4vw, 28px); }
-    .lede { font-size: 15px; line-height: 1.5; }
-    .product-card { padding: 16px; }
-    .hero-actions { flex-direction: column; gap: 12px; }
-    .billing-toggle { flex-wrap: wrap; gap: 8px; }
-    .billing-seg { padding: 10px 14px; font-size: 12px; }
-    .all-access-card { flex-direction: column; }
-    .aa-left, .aa-right { width: 100%; }
-    header nav { gap: 16px; }
-    .navlinks { display: none; }
-    .navlinks-mobile-toggle { display: block; }
+  @media (max-width:480px) {
+    .hero-stat-val {
+      font-size: 22px;
+    }
+
+    .guidance-card-num {
+      font-size: 24px;
+    }
+
+    .intelligence-content h3 {
+      font-size: 22px;
+    }
   }
 </style>
 </head>
@@ -131,21 +371,21 @@
 
 <header>
   <nav>
-    <a href="#top" class="logo"><span class="mark"><span>L</span></span> Ledger & Co.</a>
+    <a href="#top" class="logo"><span class="mark"><span>G</span></span> Gelder & Co.</a>
     <div class="navlinks" id="navLinks">
-      <a href="#guides">Guides</a>
-      <a href="#rates">Today's Rates</a>
-      <a href="#brokers">Top Brokers</a>
-      <a href="#web3">Web3</a>
+      <a href="#scorecard">Money Scorecard</a>
+      <a href="#where">Get Started</a>
+      <a href="#intelligence">AI Tools</a>
+      <a href="#products">Products</a>
       <a href="#about">About</a>
       <a href="#faq">FAQ</a>
       <a href="entry-splash.html">Capital Systems</a>
-   <a href="/financial-intelligence-scorecard.html">Financial Score</a>
-<a href="/red-flag-scorecard.html">Red Flags</a
+      <a href="/financial-intelligence-scorecard.html">Financial Score</a>
+      <a href="/red-flag-scorecard.html">Red Flags</a>
     </div>
     <div style="display:flex; align-items:center; gap:20px;">
       <a href="#" class="sign-in-link" onclick="openAuthModal('signin'); return false;">Sign in</a>
-      <a href="#guides" class="nav-cta">GET ACCESS</a>
+      <a href="#scorecard" class="nav-cta">TAKE THE SCORECARD</a>
       <button class="navlinks-mobile-toggle" id="navMobileToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">☰</button>
     </div>
   </nav>
@@ -153,53 +393,157 @@
 
 <main id="top">
 
-  <!-- HERO — COMPRESSED -->
+  <!-- HERO — CONVERSION-FOCUSED -->
   <section class="hero" style="padding-top:90px;">
     <div class="wrap">
       <div>
-        <div class="eyebrow hero-eyebrow"><span class="tick"></span>FINANCIAL EDUCATION, NOT GUESSWORK</div>
-        <h1>Finally, money advice <em>worth paying for.</em></h1>
-        <p class="lede">Research-backed guides on where real yield lives, how to read web3 opportunities, and what risks actually matter — updated monthly with interactive tools that auto-save your numbers.</p>
+        <div class="gelder-badge">POWERED BY GELDER & CO.</div>
+        <h1>Build Smarter. <em>Keep More.</em> Move with a Plan.</h1>
+        <p class="lede">Practical financial education, interactive scoring tools, and step-by-step systems designed to help you make better money decisions and build a stronger financial foundation. Get clarity on your position. Discover what matters most. Take the next step.</p>
         <div class="hero-actions">
-          <a href="#guides" class="btn-primary">VIEW PLANS — FROM $19.99/MO</a>
-          <a href="#about" class="btn-ghost">How we work →</a>
+          <a href="#scorecard" class="btn-primary">TAKE THE MONEY SCORECARD →</a>
+          <a href="#where" class="btn-ghost">Where are you right now? →</a>
         </div>
-      </div>
-      <div class="hero-panel">
-        <div class="label">Top verified APYs this week</div>
-        <div class="rate-row">
-          <div class="rate-name">Varo Bank Savings<span class="sub">Up to $5,000 balance · direct deposit required</span></div>
-          <div class="rate-val">5.00%</div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-val">15+</div>
+            <div class="hero-stat-label">Interactive Tools</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-val">6</div>
+            <div class="hero-stat-label">Financial Dimensions</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-val">100%</div>
+            <div class="hero-stat-label">Educational Focus</div>
+          </div>
         </div>
-        <div class="rate-row">
-          <div class="rate-name">Axos One<span class="sub">Boosted rate, deposit/balance reqs apply</span></div>
-          <div class="rate-val">4.21%</div>
-        </div>
-        <div class="rate-row">
-          <div class="rate-name">Newtek Personal HYS<span class="sub">Waitlist only — high demand</span></div>
-          <div class="rate-val">4.20%</div>
-        </div>
-        <div class="asof">DATA AS OF JUL 13 2026 · SOURCES: NERDWALLET, FORBES ADVISOR, FORTUNE/CURINOS</div>
       </div>
     </div>
   </section>
 
   <div class="trust-strip">
     <div class="wrap">
-      <div class="trust-item"><span class="dot"></span>Every figure dated & sourced</div>
-      <div class="trust-item"><span class="dot"></span>Risk disclosure on every product</div>
-      <div class="trust-item"><span class="dot"></span>No "guaranteed return" claims, ever</div>
-      <div class="trust-item"><span class="dot"></span>Educational content, not licensed advisory</div>
+      <div class="trust-item"><span class="dot"></span>Interactive assessments, not guesswork</div>
+      <div class="trust-item"><span class="dot"></span>Personalized insights & actionable next steps</div>
+      <div class="trust-item"><span class="dot"></span>Clear, honest educational content</div>
+      <div class="trust-item"><span class="dot"></span>No unrealistic promises, ever</div>
     </div>
   </div>
 
-  <!-- PRODUCTS — COMPRESSED DESCRIPTIONS & FEATURES -->
-  <section id="guides">
+  <!-- MONEY SCORECARD — MAIN LEAD MAGNET -->
+  <section id="scorecard">
+    <div class="wrap">
+      <div class="scorecard-hero reveal">
+        <h3>Know Your Financial Position</h3>
+        <p>Answer 15 quick questions and get a personalized snapshot of your financial foundation across 6 key areas: Cash Flow, Debt & Credit, Wealth Building, Risk Management, Financial Knowledge, and Opportunity Readiness.</p>
+        <p style="font-size: 13px; color: var(--slate); margin-top: var(--lg); margin-bottom: 0;">Takes about 2 minutes. No email required. Completely private.</p>
+        <a href="/financial-intelligence-scorecard.html" class="btn-primary" style="margin-top: var(--lg);">OPEN THE SCORECARD →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE ARE YOU RIGHT NOW? -->
+  <section id="where" class="border-top">
     <div class="wrap">
       <div class="section-head reveal">
-        <div class="eyebrow"><span class="tick"></span>MEMBERSHIP TIERS</div>
-        <h2>Three ways to learn. Monthly, quarterly, yearly, or lifetime.</h2>
-        <p>Pick your pace. Cancel anytime on recurring plans. Price locked in as long as you stay subscribed.</p>
+        <div class="eyebrow"><span class="tick"></span>FIND YOUR STARTING POINT</div>
+        <h2>Where are you right now?</h2>
+        <p>Everyone's situation is different. Tap the card that matches where you are, and we'll show you the tools and guidance that matter most.</p>
+      </div>
+
+      <div class="guidance-grid reveal">
+        <div class="guidance-card">
+          <div class="guidance-card-num">01</div>
+          <h4>I'm just getting started</h4>
+          <p>Building the fundamentals. Need clarity on what matters and where to focus first. Let's get organized.</p>
+        </div>
+        <div class="guidance-card">
+          <div class="guidance-card-num">02</div>
+          <h4>I need to get organized</h4>
+          <p>I know I should be doing more but don't have a system. Time to stop guessing and build one that works.</p>
+        </div>
+        <div class="guidance-card">
+          <div class="guidance-card-num">03</div>
+          <h4>I'm building my business</h4>
+          <p>Making money is one thing. Keeping it and planning ahead is another. Need tools for business finances.</p>
+        </div>
+        <div class="guidance-card">
+          <div class="guidance-card-num">04</div>
+          <h4>I want a better system</h4>
+          <p>I've done some of this. Now I want everything in one place with clear next steps and regular updates.</p>
+        </div>
+      </div>
+
+      <div class="reveal" style="text-align: center; margin-top: var(--2xl);">
+        <p style="color: var(--slate); margin-bottom: var(--lg);">Not sure which you are? Start with the Money Scorecard above.</p>
+        <a href="/financial-intelligence-scorecard.html" class="btn-ghost">See Your Score →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GELDER INTELLIGENCE -->
+  <section id="intelligence" class="border-top">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow"><span class="tick"></span>AI-POWERED PLANNING</div>
+        <h2>Gelder Intelligence</h2>
+        <p>Your personal financial planning workspace. Use structured AI workflows to organize information, generate insights, and turn financial goals into actionable plans.</p>
+      </div>
+
+      <div class="intelligence-container reveal">
+        <div class="intelligence-content">
+          <h3>Financial Planning, Simplified</h3>
+          <div class="intelligence-features">
+            <div class="intelligence-feature">
+              <div class="intelligence-feature-icon">📊</div>
+              <div class="intelligence-feature-text">
+                <h5>Organize Your Numbers</h5>
+                <p>Turn scattered information into a clear financial picture. We help you see what matters.</p>
+              </div>
+            </div>
+            <div class="intelligence-feature">
+              <div class="intelligence-feature-icon">❓</div>
+              <div class="intelligence-feature-text">
+                <h5>Generate Smart Questions</h5>
+                <p>Create discussion points for conversations with advisors or use them to guide your own planning.</p>
+              </div>
+            </div>
+            <div class="intelligence-feature">
+              <div class="intelligence-feature-icon">🎯</div>
+              <div class="intelligence-feature-text">
+                <h5>Build Actionable Plans</h5>
+                <p>Turn goals into real steps. Monthly budgets. Debt strategies. Investment frameworks. All structured.</p>
+              </div>
+            </div>
+            <div class="intelligence-feature">
+              <div class="intelligence-feature-icon">⚡</div>
+              <div class="intelligence-feature-text">
+                <h5>AI Workflows, Your Way</h5>
+                <p>Structured prompts that work. Not generic advice. Specific tools for real situations.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="btn-primary" style="display: inline-block; margin-top: var(--lg);">EXPLORE GELDER INTELLIGENCE →</a>
+        </div>
+        <div class="intelligence-visual">
+          <div class="intelligence-visual-placeholder">🤖</div>
+          <div class="intelligence-visual-text">
+            <strong>Educational AI Framework</strong><br>
+            Prompts, workflows, and templates designed to help you think clearly about your finances. Not financial advice — just better thinking tools.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section id="products" class="border-top">
+    <div class="wrap">
+      <div class="product-section-intro reveal">
+        <div class="eyebrow"><span class="tick"></span>COMPLETE TOOLKITS</div>
+        <h2>Not another PDF. A system you can use.</h2>
+        <p>Everything you need to understand your financial position, track progress, and take the next step. Digital tools. Worksheets. Guides. Updates.</p>
       </div>
 
       <div class="billing-toggle reveal">
@@ -215,107 +559,86 @@
 
       <div class="products reveal">
         <div class="product-card">
-          <span class="tier-tag">ENTRY</span>
-          <h3>The Yield Map</h3>
-          <div class="risk-tag">RISK: LOW</div>
+          <span class="tier-tag">FOUNDATION</span>
+          <h3>Money Foundations</h3>
+          <div class="risk-tag">RISK: EDUCATIONAL</div>
           <div class="price-row">
-            <span class="price price-monthly">$19.99</span>
-            <span class="price price-quarterly" style="display:none;">$59.99</span>
-            <span class="price price-annual" style="display:none;">$179.99</span>
-            <span class="price price-lifetime" style="display:none;">$300</span>
+            <span class="price price-monthly">$27</span>
+            <span class="price price-quarterly" style="display:none;">$81</span>
+            <span class="price price-annual" style="display:none;">$243</span>
+            <span class="price price-lifetime" style="display:none;">$400</span>
             <span class="price-period price-period-monthly">/month</span>
             <span class="price-period price-period-quarterly" style="display:none;">/quarter</span>
             <span class="price-period price-period-annual" style="display:none;">/year</span>
             <span class="price-period price-period-lifetime" style="display:none;">once</span>
           </div>
-          <p class="desc-small annual-note" style="display:none;">≈ $15.00/mo billed yearly</p>
-          <p class="desc">Where to park cash — high-yield savings, money markets, CDs, T-bills — ranked with the catches explained.</p>
+          <p class="desc-small annual-note" style="display:none;">≈ $20.25/mo billed yearly</p>
+          <p class="desc">Build the foundation. Cash flow clarity, debt strategy, savings planning. Everything you need to get organized.</p>
           <div class="recurring-box" style="margin-bottom:14px;">
-            <div class="recurring-label">YOURS INSTANTLY</div>
+            <div class="recurring-label">INCLUDES</div>
             <ul class="feat-list" style="font-size:13px;">
-              <li><span class="check">★</span> 3 in-depth guides on cash placement strategy</li>
-              <li><span class="check">★</span> Interactive tools that auto-save your numbers</li>
-              <li><span class="check">★</span> Monthly rate updates + new topic guide</li>
+              <li><span class="check">★</span> Money Scorecard + full breakdown</li>
+              <li><span class="check">★</span> Cash flow & debt planning worksheets</li>
+              <li><span class="check">★</span> Monthly financial updates</li>
             </ul>
           </div>
-          <button class="product-btn" data-product-key="yieldMap" data-price-id="yieldMap.monthly">START THE YIELD MAP</button>
+          <button class="product-btn" data-product-key="foundations" data-price-id="foundations.monthly">START FOUNDATIONS</button>
         </div>
 
         <div class="product-card featured">
           <span class="tier-tag">★ MOST CHOSEN</span>
-          <h3>The Full Ledger</h3>
-          <div class="risk-tag">RISK: LOW–MODERATE</div>
+          <h3>Complete Operating Kit</h3>
+          <div class="risk-tag">RISK: EDUCATIONAL</div>
           <div class="price-row">
-            <span class="price price-monthly">$39</span>
-            <span class="price price-quarterly" style="display:none;">$117</span>
-            <span class="price price-annual" style="display:none;">$351</span>
-            <span class="price price-lifetime" style="display:none;">$500</span>
-            <span class="price-period price-period-monthly">/month</span>
-            <span class="price-period price-period-quarterly" style="display:none;">/quarter</span>
-            <span class="price-period price-period-annual" style="display:none;">/year</span>
-            <span class="price-period price-period-lifetime" style="display:none;">once</span>
-          </div>
-          <p class="desc-small annual-note" style="display:none;">≈ $29.25/mo billed yearly</p>
-          <p class="desc">Everything above plus a framework for evaluating web3 yield — custody questions, audit primers, and how people lose money in this space.</p>
-          <div class="recurring-box" style="margin-bottom:14px;">
-            <div class="recurring-label">YOURS INSTANTLY</div>
-            <ul class="feat-list" style="font-size:13px;">
-              <li><span class="check">★</span> Everything in The Yield Map</li>
-              <li><span class="check">★</span> 3 web3/digital-asset deep-dives</li>
-              <li><span class="check">★</span> Web3 risk tools + monthly Q&A</li>
-            </ul>
-          </div>
-          <button class="product-btn" data-product-key="fullLedger" data-price-id="fullLedger.monthly">START THE FULL LEDGER</button>
-        </div>
-
-        <div class="product-card">
-          <span class="tier-tag">DEEP ACCESS</span>
-          <h3>The Annotated Portfolio</h3>
-          <div class="risk-tag">RISK: VARIES BY TOPIC</div>
-          <div class="price-row">
-            <span class="price price-monthly">$79</span>
-            <span class="price price-quarterly" style="display:none;">$237</span>
-            <span class="price price-annual" style="display:none;">$711</span>
-            <span class="price price-lifetime" style="display:none;">$1,000</span>
-            <span class="price-period price-period-monthly">/month</span>
-            <span class="price-period price-period-quarterly" style="display:none;">/quarter</span>
-            <span class="price-period price-period-annual" style="display:none;">/year</span>
-            <span class="price-period price-period-lifetime" style="display:none;">once</span>
-          </div>
-          <p class="desc-small annual-note" style="display:none;">≈ $59.25/mo billed yearly</p>
-          <p class="desc">Everything above plus income strategy — how to build a diversified approach with savings ladders, bond layering, and monthly live calls.</p>
-          <div class="recurring-box" style="margin-bottom:14px;">
-            <div class="recurring-label">YOURS INSTANTLY</div>
-            <ul class="feat-list" style="font-size:13px;">
-              <li><span class="check">★</span> All 9 evergreen guides</li>
-              <li><span class="check">★</span> Full interactive dashboard</li>
-              <li><span class="check">★</span> Monthly live call + quarterly deep-dive</li>
-            </ul>
-          </div>
-          <button class="product-btn" data-product-key="annotatedPortfolio" data-price-id="annotatedPortfolio.monthly">START THE ANNOTATED PORTFOLIO</button>
-        </div>
-      </div>
-
-      <!-- ALL-ACCESS -->
-      <div class="all-access-card reveal">
-        <div class="aa-left">
-          <span class="tier-tag" style="color:var(--gold);">★ EVERYTHING, ONE PRICE</span>
-          <h3>All-Access</h3>
-          <p class="desc" style="margin-bottom:0;">Every guide, every refresh, every Q&A and call — all three tiers in one plan with combined priority support.</p>
-        </div>
-        <div class="aa-right">
-          <div class="price-row" style="margin-bottom:6px;">
-            <span class="price price-monthly">$99</span>
-            <span class="price price-quarterly" style="display:none;">$297</span>
-            <span class="price price-annual" style="display:none;">$891</span>
+            <span class="price price-monthly">$97</span>
+            <span class="price price-quarterly" style="display:none;">$291</span>
+            <span class="price price-annual" style="display:none;">$873</span>
             <span class="price price-lifetime" style="display:none;">$1,200</span>
             <span class="price-period price-period-monthly">/month</span>
             <span class="price-period price-period-quarterly" style="display:none;">/quarter</span>
             <span class="price-period price-period-annual" style="display:none;">/year</span>
             <span class="price-period price-period-lifetime" style="display:none;">once</span>
           </div>
-          <p class="desc-small annual-note" style="display:none;">≈ $74.25/mo billed yearly</p>
-          <button class="product-btn" data-product-key="allAccess" data-price-id="allAccess.monthly" style="display:block;">START ALL-ACCESS</button>
+          <p class="desc-small annual-note" style="display:none;">≈ $72.75/mo billed yearly</p>
+          <p class="desc">Everything you need in one place. Personal finances + business planning + AI workflows + monthly updates. The complete system.</p>
+          <div class="recurring-box" style="margin-bottom:14px;">
+            <div class="recurring-label">INCLUDES</div>
+            <ul class="feat-list" style="font-size:13px;">
+              <li><span class="check">★</span> Everything in Foundations</li>
+              <li><span class="check">★</span> Business finance dashboards</li>
+              <li><span class="check">★</span> AI workflow library + prompts</li>
+              <li><span class="check">★</span> Quarterly planning calls</li>
+            </ul>
+          </div>
+          <button class="product-btn" data-product-key="operatingKit" data-price-id="operatingKit.monthly">START OPERATING KIT</button>
+        </div>
+
+        <div class="product-card">
+          <span class="tier-tag">ADVANCED</span>
+          <h3>Premium Systems</h3>
+          <div class="risk-tag">RISK: VARIES BY TOPIC</div>
+          <div class="price-row">
+            <span class="price price-monthly">$197</span>
+            <span class="price price-quarterly" style="display:none;">$591</span>
+            <span class="price price-annual" style="display:none;">$1,773</span>
+            <span class="price price-lifetime" style="display:none;">$2,200</span>
+            <span class="price-period price-period-monthly">/month</span>
+            <span class="price-period price-period-quarterly" style="display:none;">/quarter</span>
+            <span class="price-period price-period-annual" style="display:none;">/year</span>
+            <span class="price-period price-period-lifetime" style="display:none;">once</span>
+          </div>
+          <p class="desc-small annual-note" style="display:none;">≈ $147.75/mo billed yearly</p>
+          <p class="desc">Everything above plus advanced modules. Investment frameworks, business scaling strategies, wealth building systems, priority support.</p>
+          <div class="recurring-box" style="margin-bottom:14px;">
+            <div class="recurring-label">INCLUDES</div>
+            <ul class="feat-list" style="font-size:13px;">
+              <li><span class="check">★</span> Complete Operating Kit</li>
+              <li><span class="check">★</span> Investment & wealth planning</li>
+              <li><span class="check">★</span> Business growth systems</li>
+              <li><span class="check">★</span> Monthly priority support</li>
+            </ul>
+          </div>
+          <button class="product-btn" data-product-key="premiumSystems" data-price-id="premiumSystems.monthly">START PREMIUM SYSTEMS</button>
         </div>
       </div>
 
@@ -330,177 +653,21 @@
     </div>
   </section>
 
-  <!-- RATES TABLE -->
-  <section id="rates" class="border-top">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow"><span class="tick"></span>LIVE REFERENCE</div>
-        <h2>This week's actual numbers — free, no signup.</h2>
-      </div>
+  <!-- RED FLAG SCORECARD (self-injected from script) -->
+  <!-- Section injected by JavaScript below -->
 
-      <div class="rates-table reveal" style="overflow-x: auto;">
-        <div class="rates-row head">
-          <div>Account</div><div>APY</div><div>Type</div><div>The catch</div>
-        </div>
-        <div class="rates-row">
-          <div class="name">Varo Bank Savings<span class="bank-sub">Online bank</span></div>
-          <div class="apy">5.00%</div>
-          <div>HYSA</div>
-          <div class="note">Boosted rate applies only up to $5,000 balance; requires qualifying direct deposit.</div>
-        </div>
-        <div class="rates-row">
-          <div class="name">Axos One<span class="bank-sub">Online bank</span></div>
-          <div class="apy">4.21%</div>
-          <div>HYSA</div>
-          <div class="note">Boosted rate requires meeting deposit/balance conditions — base rate is lower.</div>
-        </div>
-        <div class="rates-row">
-          <div class="name">Pibank<span class="bank-sub">Online bank</span></div>
-          <div class="apy">4.40%</div>
-          <div>HYSA</div>
-          <div class="note">No monthly fee, but check current minimum opening deposit before applying.</div>
-        </div>
-        <div class="rates-row">
-          <div class="name">Climate First Bank<span class="bank-sub">Online savings</span></div>
-          <div class="apy">4.01%</div>
-          <div>HYSA</div>
-          <div class="note">Among the highest rates with minimal requirements.</div>
-        </div>
-        <div class="rates-row">
-          <div class="name">National average<span class="bank-sub">FDIC-reported traditional savings</span></div>
-          <div class="apy">0.61%</div>
-          <div>Baseline</div>
-          <div class="note">What most money actually earns. The gap is the entire point of this site.</div>
-        </div>
-      </div>
-      <div class="source-note reveal">SOURCES: NERDWALLET, FORBES ADVISOR, FORTUNE (CURINOS DATA), BANKRATE — ALL AS OF JULY 13, 2026.</div>
-    </div>
-  </section>
-
-  <!-- BROKERS — COMPRESSED DESCRIPTIONS -->
-  <section id="brokers" class="border-top">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow"><span class="tick"></span>WHERE TO OPEN AN ACCOUNT</div>
-        <h2>Top 3 brokers with $0 commissions and no minimums.</h2>
-      </div>
-
-      <div class="products reveal" style="margin-bottom:1px;">
-
-        <div class="product-card">
-          <span class="tier-tag">01 — BEST OVERALL</span>
-          <h3>Fidelity</h3>
-          <div class="risk-tag">SIPC MEMBER</div>
-          <p class="desc">$0 commissions, $0 minimum, fractional shares from $1, and strong educational tools.</p>
-          <div class="ledger-rule" style="margin-bottom:18px;"></div>
-          <a href="https://www.fidelity.com/open-account/overview" target="_blank" rel="noopener noreferrer" class="product-btn">OPEN AT FIDELITY.COM →</a>
-        </div>
-
-        <div class="product-card">
-          <span class="tier-tag">02 — BEST FOR LEARNING</span>
-          <h3>Charles Schwab</h3>
-          <div class="risk-tag">SIPC MEMBER</div>
-          <p class="desc">$0 equity commissions, $0 minimum, plus a free paper-trading practice account.</p>
-          <div class="ledger-rule" style="margin-bottom:18px;"></div>
-          <a href="https://www.schwab.com/open-an-account" target="_blank" rel="noopener noreferrer" class="product-btn">OPEN AT SCHWAB.COM →</a>
-        </div>
-
-        <div class="product-card">
-          <span class="tier-tag">03 — BEST FOR ACTIVE TRADERS</span>
-          <h3>E*TRADE</h3>
-          <div class="risk-tag">SIPC MEMBER</div>
-          <p class="desc">$0 commissions, no minimum, backed by Morgan Stanley's research and balance sheet.</p>
-          <div class="ledger-rule" style="margin-bottom:18px;"></div>
-          <a href="https://us.etrade.com/what-we-offer/our-accounts/brokerage-account" target="_blank" rel="noopener noreferrer" class="product-btn">OPEN AT ETRADE.COM →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- METHOD — COMPRESSED -->
-  <section id="method" class="border-top">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow"><span class="tick"></span>OUR METHOD</div>
-        <h2>How we vet everything.</h2>
-      </div>
-      <div class="method-grid reveal">
-        <div class="method-item">
-          <div class="num">01</div>
-          <h4>Source from primary data</h4>
-          <p>Rates and terms from issuer disclosures and reputable aggregators — never forums or rumors.</p>
-        </div>
-        <div class="method-item">
-          <div class="num">02</div>
-          <h4>Find the catch</h4>
-          <p>Every promo has a condition. We put it next to the headline number, not in a footnote.</p>
-        </div>
-        <div class="method-item">
-          <div class="num">03</div>
-          <h4>Risk before upside</h4>
-          <p>Downside is stated plainly before we talk about returns.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WEB3 — COMPRESSED -->
-  <section id="web3" class="border-top">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow"><span class="tick"></span>WEB3 & DIGITAL ASSETS</div>
-        <h2>Curiosity is fine. Confusion is expensive.</h2>
-      </div>
-      <div class="web3-grid reveal">
-        <div class="web3-card">
-          <div class="flag">What it is</div>
-          <h4>Staking & on-chain yield</h4>
-          <p>Returns from network rewards or trading fees. High-APY cases often use new depositor funds — not sustainable.</p>
-        </div>
-        <div class="web3-card">
-          <div class="flag">Ask first</div>
-          <h4>Custody & contracts</h4>
-          <p>Who holds the keys? Is it audited? Can you exit instantly? If you can't answer these, you don't understand the product yet.</p>
-        </div>
-        <div class="web3-card">
-          <div class="flag">Red flag</div>
-          <h4>"Guaranteed" returns</h4>
-          <p>No legitimate on-chain product guarantees a fixed return. "Guaranteed X% monthly" is the most reliable scam indicator.</p>
-        </div>
-        <div class="web3-card">
-          <div class="flag">Our view</div>
-          <h4>Position sizing > prediction</h4>
-          <p>Never put in more than you can lose without it changing your life. Treat every projection as a guess with a number.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- RISK DISCLOSURE -->
-  <section id="risk-disclosure" class="border-top">
-    <div class="wrap">
-      <div class="risk-block reveal">
-        <div class="icon">!</div>
-        <div>
-          <h3>Read this before you buy anything here.</h3>
-          <p>Ledger & Co. sells <strong style="color:var(--parchment)">educational research and guides</strong> — not personalized financial advice. We are not a registered investment advisor. All interest rates are variable and can change monthly. Web3 and crypto involve real risk of total loss. Speak with a licensed advisor for guidance specific to you.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT — COMPRESSED & MOVED TO HERE -->
+  <!-- ABOUT -->
   <section id="about" class="border-top">
     <div class="wrap">
       <div class="section-head reveal" style="max-width:720px;">
-        <div class="eyebrow"><span class="tick"></span>ABOUT LEDGER & CO</div>
+        <div class="eyebrow"><span class="tick"></span>ABOUT GELDER & CO</div>
         <h2>Why we exist.</h2>
-        <p>We provide research-driven educational content on long-term wealth building. Our mission is to simplify complex finance, encourage independent thinking, and help you make informed decisions through disciplined research. We believe successful investing comes from patience, education, and a long-term perspective — not speculation or hype.</p>
+        <p>We provide practical financial education and interactive tools to help you make smarter decisions about your money. Our mission is to simplify complex finance, encourage independent thinking, and build confidence through knowledge. We believe financial security comes from education, good systems, and clear thinking — not hype or speculation.</p>
       </div>
     </div>
   </section>
 
-  <!-- FAQ — REDUCED TO 7 ITEMS -->
+  <!-- FAQ -->
   <section id="faq" class="border-top">
     <div class="wrap">
       <div class="section-head reveal">
@@ -509,32 +676,32 @@
       </div>
       <div class="reveal">
         <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What is Gelder & Co.?<span class="plus">+</span></div>
+          <div class="faq-a"><p>Gelder & Co. provides educational tools, worksheets, and systems to help you understand your financial position and build better habits. We're not a licensed advisor — we help you think more clearly about money so you can make informed decisions.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What is the Money Scorecard?<span class="plus">+</span></div>
+          <div class="faq-a"><p>A 15-question interactive assessment that evaluates your financial foundation across 6 key areas: Cash Flow, Debt & Credit, Wealth Building, Risk Management, Financial Knowledge, and Opportunity Readiness. Takes about 2 minutes. Completely free and private.</p></div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What do I get with the Operating Kit?<span class="plus">+</span></div>
+          <div class="faq-a"><p>The Money Scorecard, personal finance dashboards, monthly cash flow planner, debt strategy planner, savings goal planner, business finance tools, AI workflow library, and quarterly planning guidance. Everything you need in one system.</p></div>
+        </div>
+        <div class="faq-item">
           <div class="faq-q" onclick="toggleFaq(this)">Is this financial advice?<span class="plus">+</span></div>
-          <div class="faq-a"><p>No. These are educational guides. We don't know your full financial picture, so we can't give personalized recommendations. Talk to a licensed advisor for advice tailored to you.</p></div>
+          <div class="faq-a"><p>No. These are educational guides and tools. We don't know your full situation, so we can't give personalized recommendations. Speak with a licensed advisor for advice tailored to you.</p></div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">Why aren't the rates "guaranteed lifetime"?<span class="plus">+</span></div>
-          <div class="faq-a"><p>Because no honest source can promise that. Rates move with the Fed and bank policy, sometimes monthly. Our guides are dated and sourced so you know exactly how fresh the number is.</p></div>
+          <div class="faq-q" onclick="toggleFaq(this)">Do I need financial experience?<span class="plus">+</span></div>
+          <div class="faq-a"><p>No. Everything is designed for people who are just getting started. We explain concepts clearly, provide templates and worksheets, and break things down step-by-step.</p></div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">What happens after I subscribe?<span class="plus">+</span></div>
-          <div class="faq-a"><p>You get instant access to your tier's guides and tools via Paddle checkout. Each month you get a refreshed rate sheet and new content automatically, plus any Q&A or call access included in your tier.</p></div>
+          <div class="faq-q" onclick="toggleFaq(this)">Can I use this for my business?<span class="plus">+</span></div>
+          <div class="faq-a"><p>Yes. The Operating Kit and Premium Systems include business finance tools, cash flow dashboards for businesses, and planning templates designed for both personal and business money management.</p></div>
         </div>
         <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">Can I cancel or switch tiers?<span class="plus">+</span></div>
-          <div class="faq-a"><p>Yes, anytime from your Paddle customer portal. If you cancel, you keep access until the end of your current billing period. No partial-month refunds unless covered by our 7-day window.</p></div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">What does "lifetime" access include?<span class="plus">+</span></div>
-          <div class="faq-a"><p>One payment, no further charges, ever — including all future monthly refreshes, new guides, and Q&A/call access your tier includes. It pays for itself in roughly 18 months if you stay subscribed.</p></div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">Do you take commissions from the companies you mention?<span class="plus">+</span></div>
-          <div class="faq-a"><p>If any guide ever includes an affiliate link, it will be labeled clearly at that spot — not buried in a disclosure page. Our rankings are never for sale.</p></div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q" onclick="toggleFaq(this)">What's your refund policy?<span class="plus">+</span></div>
-          <div class="faq-a"><p>Full refund, no questions asked, within 7 days of your first charge. After that, cancel anytime to stop future charges. Read our <a href="terms-of-sale.html" style="color:var(--gold);">Terms of Sale</a> for the full details.</p></div>
+          <div class="faq-q" onclick="toggleFaq(this)">Can I cancel anytime?<span class="plus">+</span></div>
+          <div class="faq-a"><p>Yes. Cancel anytime from your account. For monthly and quarterly plans, you lose access at the end of your billing period. For annual and lifetime, you keep everything you've downloaded.</p></div>
         </div>
       </div>
     </div>
@@ -543,11 +710,11 @@
   <!-- FINAL CTA -->
   <section class="border-top" id="checkout">
     <div class="wrap" style="text-align:center; max-width:680px;">
-      <div class="eyebrow reveal" style="justify-content:center;"><span class="tick"></span>READY WHEN YOU ARE</div>
-      <h2 class="serif reveal" style="font-size:clamp(28px,4vw,40px); margin-top:18px; font-weight:500;">Start with whichever guide matches where you are right now.</h2>
-      <p class="reveal" style="color:var(--slate); margin-top:16px;">Checkout is handled securely through Paddle. Pick a guide above and you'll land on a secure checkout page in seconds.</p>
+      <div class="eyebrow reveal" style="justify-content:center;"><span class="tick"></span>READY TO START?</div>
+      <h2 class="serif reveal" style="font-size:clamp(28px,4vw,40px); margin-top:18px; font-weight:500;">Take the Money Scorecard. It's free. Takes 2 minutes.</h2>
+      <p class="reveal" style="color:var(--slate); margin-top:16px;">Get your financial snapshot today, then pick the toolkit that matches where you are.</p>
       <div class="reveal" style="margin-top:36px;">
-        <a href="#guides" class="btn-primary">CHOOSE YOUR GUIDE</a>
+        <a href="/financial-intelligence-scorecard.html" class="btn-primary">TAKE THE SCORECARD →</a>
       </div>
     </div>
   </section>
@@ -561,7 +728,7 @@
 
     <div id="signinView">
       <h3>Sign in</h3>
-      <p class="sub">Access the guides and rate sheets included in your plan.</p>
+      <p class="sub">Access your tools, plans, and library.</p>
       <form onsubmit="return handleSignIn(event)">
         <div class="form-field">
           <label for="signinEmail">Email</label>
@@ -573,12 +740,12 @@
         </div>
         <button type="submit" class="modal-submit">SIGN IN</button>
       </form>
-      <div class="modal-switch">No account yet? <a onclick="switchAuthView('signup')" tabindex="0" role="button">Subscribe & create one</a></div>
+      <div class="modal-switch">No account yet? <a onclick="switchAuthView('signup')" tabindex="0" role="button">Create one</a></div>
     </div>
 
     <div id="signupView" style="display:none;">
       <h3>Create your account</h3>
-      <p class="sub">No purchase needed to sign up.</p>
+      <p class="sub">Get access to the Money Scorecard and tools.</p>
       <form onsubmit="return handleSignUp(event)">
         <div class="form-field">
           <label for="signupEmail">Email</label>
@@ -597,74 +764,19 @@
               <div><strong>Not yet</strong><span>Just create my account — I'll pick a plan later.</span></div>
             </label>
             <label class="pm-option">
-              <input type="radio" name="wantsPlan" value="quiz" onchange="updateSignupPlanUI()">
-              <div><strong>Not sure — help me decide</strong><span>Answer a few quick questions.</span></div>
-            </label>
-            <label class="pm-option">
               <input type="radio" name="wantsPlan" value="yes" onchange="updateSignupPlanUI()">
-              <div><strong>Yes, set me up now</strong><span>I already know which guide I want.</span></div>
+              <div><strong>Yes, set me up now</strong><span>I already know which toolkit I want.</span></div>
             </label>
           </div>
         </div>
 
-        <!-- QUIZ (hidden until "Not sure" above) -->
-        <div class="form-field" id="quizFields" style="display:none;">
-          <div class="quiz-question">
-            <label>What's mainly on your mind right now?</label>
-            <select id="quizGoal" class="tier-select" onchange="updateQuizRecommendation()">
-              <option value="park-cash">Finding a better place to park cash I already have</option>
-              <option value="web3-curious" selected>Web3 / crypto yield stuff keeps coming up and I want to understand it before I touch it</option>
-              <option value="build-income">Building toward a real income strategy, not just one account switch</option>
-              <option value="all-of-it">Honestly, all of the above</option>
-            </select>
-          </div>
-          <div class="quiz-question">
-            <label>How hands-on do you want to be?</label>
-            <select id="quizDepth" class="tier-select" onchange="updateQuizRecommendation()">
-              <option value="light" selected>Light — just tell me what's good and what to avoid</option>
-              <option value="moderate">Moderate — I'll read a worksheet and ask occasional questions</option>
-              <option value="deep">Deep — I want calls, ongoing Q&A, and the full picture</option>
-            </select>
-          </div>
-          <div class="quiz-question">
-            <label>Budget comfort for a monthly guide like this?</label>
-            <select id="quizBudget" class="tier-select" onchange="updateQuizRecommendation()">
-              <option value="low" selected>Closer to $20/mo</option>
-              <option value="mid">Closer to $40/mo</option>
-              <option value="high">$75+/mo is fine if the depth is there</option>
-            </select>
-          </div>
-          <div class="quiz-result" id="quizResult">
-            <div class="quiz-result-label">BASED ON THAT, WE'D START WITH</div>
-            <div class="quiz-result-name" id="quizResultName">The Full Ledger</div>
-            <p class="quiz-result-note" id="quizResultNote">A good middle ground if web3 questions are part of what brought you here.</p>
-          </div>
-          <button type="button" class="btn-ghost" style="margin-top:4px;" onclick="applyQuizRecommendation()">USE THIS RECOMMENDATION →</button>
-        </div>
-
-        <!-- STEP 2 (hidden until "Yes" above): single vs. stack -->
+        <!-- STEP 2: Plan selection -->
         <div class="form-field" id="purchaseModeField" style="display:none;">
-          <label>How do you want to buy?</label>
-          <div class="purchase-mode-options">
-            <label class="pm-option">
-              <input type="radio" name="purchaseMode" value="single" checked onchange="updateSignupPlanUI()">
-              <div><strong>Single plan</strong><span>One active tier at a time. Only one bill.</span></div>
-            </label>
-            <label class="pm-option">
-              <input type="radio" name="purchaseMode" value="stack" onchange="updateSignupPlanUI()">
-              <div><strong>Stack multiple tiers</strong><span>Own more than one tier at once. Get 15% off each after your first.</span></div>
-            </label>
-          </div>
-        </div>
-
-        <!-- STEP 3a (hidden until "single" chosen): one tier + one billing interval -->
-        <div class="form-field" id="singlePlanFields" style="display:none;">
-          <label for="signupTier">Which guide do you want?</label>
+          <label for="signupTier">Which toolkit do you want?</label>
           <select id="signupTier" class="tier-select">
-            <option value="1">The Yield Map</option>
-            <option value="2" selected>The Full Ledger</option>
-            <option value="3">The Annotated Portfolio</option>
-            <option value="4">All-Access</option>
+            <option value="1">Money Foundations — $27/mo</option>
+            <option value="2" selected>Complete Operating Kit — $97/mo</option>
+            <option value="3">Premium Systems — $197/mo</option>
           </select>
           <label for="signupBillingInterval" style="margin-top:14px;">Billing</label>
           <select id="signupBillingInterval" class="tier-select">
@@ -675,44 +787,6 @@
           </select>
         </div>
 
-        <!-- STEP 3b (hidden until "stack" chosen) -->
-        <div class="form-field" id="stackPlanFields" style="display:none;">
-          <label>Choose any combination of guides to stack</label>
-          <div class="stack-tier-options">
-            <label class="stack-tier-row">
-              <input type="checkbox" name="stackTier" value="1" onchange="updateSignupPlanUI()">
-              <span class="stack-tier-name">The Yield Map</span>
-              <select class="tier-select stack-tier-billing" data-tier="1">
-                <option value="monthly" selected>Monthly</option>
-                <option value="quarterly">Quarterly</option>
-                <option value="annual">Annual — save 25%</option>
-                <option value="lifetime">Lifetime</option>
-              </select>
-            </label>
-            <label class="stack-tier-row">
-              <input type="checkbox" name="stackTier" value="2" onchange="updateSignupPlanUI()">
-              <span class="stack-tier-name">The Full Ledger</span>
-              <select class="tier-select stack-tier-billing" data-tier="2">
-                <option value="monthly" selected>Monthly</option>
-                <option value="quarterly">Quarterly</option>
-                <option value="annual">Annual — save 25%</option>
-                <option value="lifetime">Lifetime</option>
-              </select>
-            </label>
-            <label class="stack-tier-row">
-              <input type="checkbox" name="stackTier" value="3" onchange="updateSignupPlanUI()">
-              <span class="stack-tier-name">The Annotated Portfolio</span>
-              <select class="tier-select stack-tier-billing" data-tier="3">
-                <option value="monthly" selected>Monthly</option>
-                <option value="quarterly">Quarterly</option>
-                <option value="annual">Annual — save 25%</option>
-                <option value="lifetime">Lifetime</option>
-              </select>
-            </label>
-          </div>
-          <p class="desc-small" id="stackEmptyWarning" style="display:none; color:#e0b85e;">Pick at least one guide to stack.</p>
-        </div>
-
         <button type="submit" class="modal-submit" id="signupSubmitBtn">CREATE ACCOUNT</button>
       </form>
       <div class="modal-switch">Already a member? <a onclick="switchAuthView('signin')" tabindex="0" role="button">Sign in</a></div>
@@ -721,22 +795,22 @@
   </div>
 </div>
 
-<!-- ============ EMAIL CAPTURE POPUP (first-visit) ============ -->
+<!-- ============ EMAIL CAPTURE POPUP ============ -->
 <div class="email-popup-overlay" id="emailPopup">
   <div class="email-popup-box">
     <button class="email-popup-close" onclick="closeEmailPopup()">×</button>
     <div class="eyebrow"><span class="tick"></span>FREE — NO CARD NEEDED</div>
-    <h3>"Finally, money advice worth paying for."</h3>
-    <p class="sub">Get our free <strong style="color:var(--parchment); font-style:normal;">Stock Evaluation Framework</strong> — the same questions we ask before mentioning any company — plus this week's rate sheet and a peek at what members get every month. No spam, unsubscribe whenever.</p>
+    <h3>Get your Money Snapshot</h3>
+    <p class="sub">Get the Money Scorecard plus our latest financial planning guide, delivered to your inbox. No spam. Unsubscribe anytime.</p>
     <div id="emailPopupForm">
       <form class="email-popup-form" onsubmit="return handleEmailCapture(event)">
         <label for="popupEmail" style="position:absolute; left:-9999px;">Email address</label>
         <input type="email" id="popupEmail" required placeholder="you@email.com">
-        <button type="submit">SEND IT TO ME</button>
+        <button type="submit">SEND IT</button>
       </form>
     </div>
-    <div id="emailPopupSuccess" class="email-popup-success" style="display:none;">You're in. Check your inbox shortly.</div>
-    <span class="email-popup-skip" onclick="closeEmailPopup()" tabindex="0" role="button">No thanks, just let me browse</span>
+    <div id="emailPopupSuccess" class="email-popup-success" style="display:none;">Check your inbox in a few moments.</div>
+    <span class="email-popup-skip" onclick="closeEmailPopup()" tabindex="0" role="button">No thanks, just browse</span>
   </div>
 </div>
 
@@ -744,29 +818,52 @@
 <div class="dashboard-overlay" id="dashboard">
   <div class="dash-header">
     <div class="wrap">
-      <a href="#" class="logo" onclick="return false;"><span class="mark"><span>L</span></span> Ledger & Co.</a>
+      <a href="#" class="logo" onclick="return false;"><span class="mark"><span>G</span></span> Gelder & Co.</a>
       <button class="dash-signout" onclick="signOut()">SIGN OUT</button>
     </div>
   </div>
 
   <div class="wrap">
     <div class="dash-hero">
-      <div class="dash-demo-flag" id="dashStatusNote" style="display:none;">Checkout isn't connected to this sign-up form yet — if you just created an account, use one of the START buttons on the pricing section with the same email, then sign in again.</div>
+      <div class="dash-demo-flag" id="dashStatusNote" style="display:none;">Welcome! If you just created an account, use one of the toolkit buttons on the pricing section with the same email, then sign in again.</div>
 
-      <div class="dash-plan-badge"><span class="tick" style="background:var(--gold); width:14px; height:1px; display:inline-block;"></span> <span id="dashPlanName">THE FULL LEDGER</span> — ACTIVE</div>
+      <div class="dash-plan-badge"><span class="tick" style="background:var(--gold); width:14px; height:1px; display:inline-block;"></span> <span id="dashPlanName">COMPLETE OPERATING KIT</span> — ACTIVE</div>
       <h2>Welcome back, <span id="demoEmailDisplay">there</span>.</h2>
-      <div class="dash-meta">
-        <div class="dash-meta-item"><div class="label">Current plan</div><div class="val" id="dashPlanVal">The Full Ledger</div></div>
-        <div class="dash-meta-item"><div class="label">Billing</div><div class="val" id="dashBillingVal">Monthly</div></div>
-        <div class="dash-meta-item"><div class="label">Renews</div><div class="val">Jul 17, 2026</div></div>
+
+      <div class="dash-welcome-msg">
+        You're all set up. Your tools are ready to use, and your account is current through the end of your billing period.
+      </div>
+
+      <div class="section-head" style="margin-bottom:24px;">
+        <h3 style="font-size:20px; margin-bottom:12px;">Your Financial Dashboard</h3>
+      </div>
+
+      <div class="dash-card-grid">
+        <div class="dash-card">
+          <div class="dash-card-label">Money Score</div>
+          <div class="dash-card-val">—</div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-label">Cash Flow</div>
+          <div class="dash-card-val">—</div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-label">Savings Goal</div>
+          <div class="dash-card-val">—</div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-label">Business Readiness</div>
+          <div class="dash-card-val">—</div>
+        </div>
       </div>
     </div>
 
     <div class="savings-tracker reveal">
       <div class="st-left">
-        <div class="eyebrow"><span class="tick"></span>YOUR VALUE SO FAR</div>
-        <h3>Tell us what you moved or avoided — we'll keep the running total.</h3>
-        <button class="btn-ghost" style="margin-top:14px;" onclick="logWin()">+ LOG A WIN</button>
+        <div class="eyebrow"><span class="tick"></span>YOUR PROGRESS</div>
+        <h3>Track your wins</h3>
+        <p style="font-size: 14px; color: var(--slate); margin-bottom: var(--lg);">When you implement something from the guides or tools, log it here. We'll show you the total value you've captured.</p>
+        <button class="btn-ghost" style="margin-top:10px;" onclick="logWin()">+ LOG A WIN</button>
       </div>
       <div class="st-right">
         <div class="st-amount" id="totalSavings">$0</div>
@@ -774,7 +871,7 @@
       </div>
     </div>
 
-    <div class="section-head" style="margin-bottom:32px;">
+    <div class="section-head" style="margin-bottom:32px; margin-top: var(--2xl);">
       <div class="eyebrow"><span class="tick"></span>YOUR LIBRARY</div>
       <h2 style="font-size:26px; margin-top:14px;">Everything included in your plan.</h2>
     </div>
@@ -803,8 +900,8 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-col">
-        <h5>Ledger & Co.</h5>
-        <p style="max-width:280px;">Straightforward financial education. We'd rather lose a sale than overstate a return.</p>
+        <h5>Gelder & Co.</h5>
+        <p style="max-width:280px;">Practical financial education. Clear thinking. Better systems. No hype.</p>
         <p style="font-size:12px; color:var(--slate); margin-top:12px;">
           <a href="mailto:dee8shops@gmail.com" style="color:var(--gold);">dee8shops@gmail.com</a><br>
           <a href="terms-of-sale.html" style="color:var(--gold);">Terms of Sale</a><br>
@@ -812,29 +909,28 @@
         </p>
       </div>
       <div class="footer-col">
-        <h5>Guides</h5>
-        <a href="#guides">The Yield Map — $19.99/mo</a>
-        <a href="#guides">The Full Ledger — $39/mo</a>
-        <a href="#guides">The Annotated Portfolio — $79/mo</a>
-        <a href="#guides">All-Access — $99/mo</a>
-        <a href="#guides">Lifetime access available</a>
+        <h5>Toolkits</h5>
+        <a href="#products">Money Foundations — $27/mo</a>
+        <a href="#products">Operating Kit — $97/mo</a>
+        <a href="#products">Premium Systems — $197/mo</a>
+        <a href="#products">Lifetime access available</a>
       </div>
       <div class="footer-col">
-        <h5>Learn</h5>
-        <a href="#rates">This Week's Rates</a>
-        <a href="#brokers">Top 3 Brokers</a>
-        <a href="#web3">Web3 Basics</a>
+        <h5>Resources</h5>
+        <a href="#scorecard">Money Scorecard</a>
+        <a href="#where">Where to Start</a>
+        <a href="#intelligence">Gelder Intelligence</a>
         <a href="#about">About</a>
         <a href="#faq">FAQ</a>
       </div>
     </div>
 
     <div class="disclosure-full">
-      <strong style="color:var(--slate);">DISCLOSURE:</strong> Ledger & Co. provides educational content only and does not provide financial, investment, legal, or tax advice. All investments involve risk, including possible loss of principal. We are not a registered investment advisor, broker-dealer, or tax professional. Interest rates are subject to change without notice. Digital assets involve substantial risk, including potential loss of principal. Consult a licensed professional regarding your specific situation.
+      <strong style="color:var(--slate);">DISCLOSURE:</strong> Gelder & Co. provides educational content only and does not provide financial, investment, legal, or tax advice. All investments involve risk, including possible loss of principal. We are not a registered investment advisor, broker-dealer, or tax professional. Consult a licensed professional regarding your specific situation.
     </div>
 
     <div class="footer-bottom">
-      <span>Copyright © 2026 Ledger & Co. All rights reserved.</span>
+      <span>Copyright © 2026 Gelder & Co. All rights reserved.</span>
       <span>Educational Content Only — Not Financial Advice</span>
     </div>
   </div>
@@ -895,7 +991,7 @@
 })();
 </script>
 
-<!-- ============ SHOP BUTTON (signed-in shop entry, stays signed in) ============ -->
+<!-- ============ SHOP & ACCOUNT NAV (signed-in only) ============ -->
 <script>
 (function(){
   function injectShopNav(){
@@ -903,9 +999,8 @@
     if(navLinks && !document.getElementById('shopNavLink')){
       var a = document.createElement('a');
       a.id = 'shopNavLink';
-      a.href = '#guides';
+      a.href = '#products';
       a.textContent = 'Shop';
-      a.addEventListener('click', function(e){ e.preventDefault(); goShop(); });
       navLinks.appendChild(a);
     }
   }
@@ -926,38 +1021,8 @@
       else { actions.appendChild(a); }
     }
   }
-  function injectDashShopBtn(){
-    var dashHero = document.querySelector('#dashboard .dash-hero');
-    if(dashHero && !document.getElementById('dashShopBtn')){
-      var btn = document.createElement('button');
-      btn.id = 'dashShopBtn';
-      btn.className = 'dash-shop-btn';
-      btn.textContent = 'Browse plans →';
-      btn.addEventListener('click', goShop);
-      dashHero.appendChild(btn);
-    }
-  }
-  function goShop(){
-    var dash = document.getElementById('dashboard');
-    if(dash){ dash.classList.remove('show'); }
-    document.body.style.overflow = '';
-    document.body.classList.add('is-authed');
-    var guides = document.getElementById('guides');
-    if(guides){ guides.scrollIntoView({ behavior:'smooth', block:'start' }); }
-  }
   function setAuthed(on){
     document.body.classList.toggle('is-authed', !!on);
-  }
-  function wrapAuthFns(){
-    if(typeof window.signOut === 'function' && !window.__shopWrappedLogout){
-      var origOut = window.signOut;
-      window.signOut = async function(){
-        var r = await origOut.apply(this, arguments);
-        setAuthed(false);
-        return r;
-      };
-      window.__shopWrappedLogout = true;
-    }
   }
   function watchSession(){
     var sb = window.__ledgerSupabaseClient;
@@ -979,8 +1044,6 @@
   function init(){
     injectShopNav();
     injectAccountNav();
-    injectDashShopBtn();
-    wrapAuthFns();
     watchSession();
   }
   if(document.readyState === 'loading'){
@@ -994,22 +1057,12 @@
 <!-- ============ RED FLAG SCORECARD (free tool — self-injecting) ============ -->
 <script>
 (function(){
-  var URL_SCORECARD = 'red-flag-scorecard.html';
-  var URL_GUIDE     = 'red-flag-guide.html';
-
-  function injectNav(){
-    var navLinks = document.getElementById('navLinks');
-    if(!navLinks || document.getElementById('redflagNavLink')) return;
-    var a = document.createElement('a');
-    a.id = 'redflagNavLink';
-    a.href = '#redflag';
-    a.textContent = 'Free Tool';
-    navLinks.insertBefore(a, navLinks.firstChild);
-  }
+  var URL_SCORECARD = '/red-flag-scorecard.html';
+  var URL_GUIDE     = '/red-flag-guide.html';
 
   function injectSection(){
-    var guides = document.getElementById('guides');
-    if(!guides || document.getElementById('redflag')) return;
+    var intel = document.getElementById('intelligence');
+    if(!intel || document.getElementById('redflag')) return;
 
     var s = document.createElement('section');
     s.id = 'redflag';
@@ -1019,7 +1072,7 @@
       +   '<div class="section-head reveal">'
       +     '<div class="eyebrow"><span class="tick"></span>FREE — NO SIGNUP</div>'
       +     '<h2>The Red Flag Scorecard.</h2>'
-      +     '<p>Twelve warning signs behind most bad investments — before your money is committed. Learn each one plainly, then score your own situation and get a personalized breakdown.</p>'
+      +     '<p>Twelve warning signs behind most bad investments. Learn each one clearly, then score your own situation to see your risk level.</p>'
       +   '</div>'
       +   '<div class="web3-grid reveal">'
       +     '<div class="web3-card">'
@@ -1030,49 +1083,44 @@
       +     '<div class="web3-card">'
       +       '<div class="flag">Then score it</div>'
       +       '<h4>Your situation, 0–100</h4>'
-      +       '<p>Tap through twelve questions. The risk score updates as you go.</p>'
+      +       '<p>Answer twelve questions. See your risk score update in real-time.</p>'
       +     '</div>'
       +     '<div class="web3-card">'
       +       '<div class="flag">Then act</div>'
       +       '<h4>A personalized breakdown</h4>'
-      +       '<p>Every flag you raised, explained — with the exact next step.</p>'
+      +       '<p>Every flag you raised, explained with clear next steps.</p>'
       +     '</div>'
       +     '<div class="web3-card">'
       +       '<div class="flag">Nothing kept</div>'
       +       '<h4>Genuinely free</h4>'
-      +       '<p>No account, no email, nothing saved anywhere. Use it and ignore us entirely if you want.</p>'
+      +       '<p>No account, no email, nothing saved. Completely private.</p>'
       +     '</div>'
       +   '</div>'
       +   '<div class="upgrade-nudge reveal">'
-      +     '<p><strong>Start here if you\'re new.</strong> Takes about a minute. If it\'s useful, the paid guides go deeper.</p>'
-      +     '<a href="' + URL_SCORECARD + '" class="btn-primary">OPEN THE SCORECARD →</a>'
+      +     '<p><strong>Great starting point.</strong> Takes about a minute. If it\'s useful, our toolkits go much deeper.</p>'
+      +     '<a href="' + URL_SCORECARD + '" class="btn-primary">OPEN RED FLAG SCORECARD →</a>'
       +   '</div>'
       + '</div>';
 
-    guides.parentNode.insertBefore(s, guides);
+    intel.parentNode.insertBefore(s, intel.nextSibling);
   }
 
   function injectFooter(){
     var cols = document.querySelectorAll('footer .footer-col');
     for(var i = 0; i < cols.length; i++){
       var h = cols[i].querySelector('h5');
-      if(h && h.textContent.trim() === 'Learn'){
+      if(h && h.textContent.trim() === 'Resources'){
         if(cols[i].querySelector('a[href="' + URL_SCORECARD + '"]')) return;
-        var a1 = document.createElement('a');
-        a1.href = URL_SCORECARD;
-        a1.textContent = 'Red Flag Scorecard — free';
-        var a2 = document.createElement('a');
-        a2.href = URL_GUIDE;
-        a2.textContent = 'The Red Flag Field Guide';
-        cols[i].insertBefore(a2, cols[i].children[1] || null);
-        cols[i].insertBefore(a1, cols[i].children[1] || null);
+        var a = document.createElement('a');
+        a.href = URL_SCORECARD;
+        a.textContent = 'Red Flag Scorecard — free';
+        cols[i].appendChild(a);
         return;
       }
     }
   }
 
   function init(){
-    injectNav();
     injectSection();
     injectFooter();
   }
@@ -1085,7 +1133,7 @@
 })();
 </script>
 
-<!-- ============ MAKE WEBHOOK BRIDGE (signup machine — self-injecting) ============ -->
+<!-- ============ MAKE WEBHOOK BRIDGE (signup machine) ============ -->
 <script>
 (function(){
   var HOOK = 'https://hook.us2.make.com/eya146u6t5dfrkypwgs2kfhreg8urp3a';
@@ -1099,7 +1147,7 @@
   function ping(email, source){
     if(!email) return;
     try{
-      var key = 'ledgerHookSent:' + email.toLowerCase();
+      var key = 'gelderHookSent:' + email.toLowerCase();
       if(localStorage.getItem(key)) return;
       localStorage.setItem(key, '1');
     }catch(_){}
@@ -1185,71 +1233,13 @@
     });
   }
 
-  function pingIfNewGoogleUser(){
-    var sb = window.__ledgerSupabaseClient;
-    if(!sb || !sb.auth) return;
-    sb.auth.getSession().then(function(res){
-      var user = res && res.data && res.data.session && res.data.session.user;
-      if(!user || !user.email) return;
-      var provider = (user.app_metadata && user.app_metadata.provider) || '';
-      if(provider !== 'google') return;
-      try{
-        var key = 'ledgerHookSent:' + user.email.toLowerCase();
-        if(localStorage.getItem(key)) return;
-        localStorage.setItem(key, '1');
-      }catch(_){}
-      var name = (user.user_metadata && (user.user_metadata.full_name || user.user_metadata.name)) || 'there';
-      var qs = '?email=' + encodeURIComponent(user.email)
-             + '&name=' + encodeURIComponent(name)
-             + '&source=google-oauth';
-      try{ fetch(HOOK + qs, { method:'GET', mode:'no-cors', keepalive:true }); }catch(_){}
-    }).catch(function(){});
-  }
-
-  function init(){ inject(); setTimeout(pingIfNewGoogleUser, 1500); }
+  function init(){ inject(); }
   if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', init); }
   else { init(); }
 })();
 </script>
 
-<!-- ============ APPLE SIGNIN (self-injecting) ============ -->
-<script>
-(function(){
-  var SITE = 'https://onestopdesignshop.github.io/Ledger-co-site/';
-
-  function makeAppleButton(){
-    var btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'apple-signin-btn';
-    btn.style.cssText = 'width:100%;display:flex;align-items:center;justify-content:center;'
-      + 'gap:10px;padding:12px;border:1px solid rgba(255,255,255,0.25);border-radius:4px;'
-      + 'background:#000;color:#fff;font-weight:bold;font-size:14px;cursor:pointer;margin-top:10px;';
-    btn.innerHTML = '<svg width="16" height="20" viewBox="0 0 384 512" fill="#fff">'
-      + '<path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>'
-      + 'Continue with Apple';
-    btn.addEventListener('click', function(){
-      var sb = window.__ledgerSupabaseClient;
-      if(!sb || !sb.auth){ alert('Sign-in is loading — try again in a second.'); return; }
-      sb.auth.signInWithOAuth({ provider:'apple', options:{ redirectTo: SITE } });
-    });
-    return btn;
-  }
-
-  function inject(){
-    ['signinView','signupView'].forEach(function(id){
-      var view = document.getElementById(id);
-      if(!view || view.querySelector('.apple-signin-btn')) return;
-      var g = view.querySelector('.google-signin-btn');
-      if(g){ g.parentNode.insertBefore(makeAppleButton(), g.nextSibling); }
-    });
-  }
-
-  if(document.readyState === 'loading'){ document.addEventListener('DOMContentLoaded', inject); }
-  else { inject(); }
-})();
-</script>
-
-<!-- ============ ACCOUNT DELETION (Apple 5.1.1v) ============ -->
+<!-- ============ ACCOUNT DELETION ============ -->
 <style>
   .lc-danger-zone{margin:48px 0 24px;padding:24px 28px;border:1px solid rgba(196,30,58,.45);border-radius:10px;background:rgba(196,30,58,.06)}
   .lc-danger-zone h3{margin:0 0 6px;font-size:1.05rem;letter-spacing:.04em;color:#e05a6f}
@@ -1269,7 +1259,7 @@
     sec.id = "lcDangerZone";
     sec.innerHTML =
       '<h3>Delete account</h3>' +
-      '<p>Permanently delete your Ledger & Co. account and access records.</p>' +
+      '<p>Permanently delete your Gelder & Co. account and access records.</p>' +
       '<button type="button" class="lc-danger-btn" id="lcDeleteAccountBtn">Delete my account</button>';
     grid.insertAdjacentElement("afterend", sec);
     document.getElementById("lcDeleteAccountBtn").addEventListener("click", function(){
